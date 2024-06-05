@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/globals.css" />
+    <link rel="stylesheet" href="static/stan.css" />
+    <link rel="stylesheet" href="static/magazyn.css" />
+    <title>Stan bazy leków</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var table = document.getElementById("med_table");
+            var tbody = table.querySelector("tbody");
+
+            if (!tbody) {
+                table.style.display = "none";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="back" onclick="history.back()"/> 
+    <div class="meds-container">
+        <div class="rectangle">
+            <dialog open>
+                <h1>E-Recepty</h1>
+                <form action="{{ url_for('recepta') }}" method="post" name="prescriptionForm">
+                    <div class="dialog_form">
+                        <label for="pesel">PESEL</label>
+                        <input type="text" name="pesel" id="pesel"></br>
+                        <label for="kod_dostepu">Kod dostępu</label>
+                        <input type="text" name="kod_dostepu" id="kod_dostepu">
+                    </div>
+                    <button type="submit" class="dialog_button">Sprawdź</button>
+                </form>
+                    <table id="med_table">
+                        <thead>
+                            <tr>
+                                <th>Nazwa Leku</th>
+                                <th>Ilosc opakowan</th>
+                                <th>Ilosc tabletek</th>
+                                <th>Dawka</th>
+                                <th>Odpłatność</th>
+                            </tr>
+                        </thead>
+                        {% for meds_array in meds %}
+                        <tbody>
+                            {% for med in meds_array %}
+                            <tr>
+                                <td>{{ med[0] }}</td>
+                                <td>{{ med[1] }}</td>
+                                <td>{{ med[2] }}</td>
+                                <td>{{ med[3] }}</td>
+                                <td>{{ med[4] }}%</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        {% endfor %}
+                    </table>
+            </dialog>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/globals.css" />
+    <link rel="stylesheet" href="static/magazyn.css" />
+    <title>Stan bazy leków</title>
+</head>
+
+<body>
+  <input type="button" value="back" onclick="history.back()"/> 
+    <div class="meds_add">
+      <form action="{{ url_for('magazyn') }}" method="post" name="medsAddForm">
+        <div class="overlap-wrapper">
+          <div class="overlap">
+            <div class="rectangle">
+              <div class="group">
+                <div class="text-wrapper-2">
+                <h1>Dodaj leki</h1></div>
+                <div class="overlap-group-wrapper">
+                  <div class="overlap-2">
+                    
+                    <div class="group">
+                      <label for="pesel">Nazwa Leku</label>
+                      <input
+                        type="text"
+                        name="nazwa_leku"
+                        id="nazwa_leku"
+                      /><br />
+
+                      <label for="ilosc_tabletek">Ilość tabletek</label>
+                      <input
+                        type="number"
+                        name="ilosc_tabletek"
+                        id="ilosc_tabletek"
+                      /><br />
+
+                      <label for="dawka">Dawka</label>
+                      <input type="text" name="dawka" id="dawka" /><br />
+
+                      <label for="ilosc_opakowan">Ilość opakowań</label>
+                      <input
+                        type="number"
+                        name="ilosc_opakowan"
+                        id="ilosc_opakowan"
+                      /><br />
+
+                      <label for="waznosc">Data ważności</label>
+                      <input type="date" name="waznosc" id="waznosc" /><br />
+                      <div class="text-wrapper-3">
+                      <label for="cena">Cena</label></div>
+                      <input
+                        type="number"
+                        step="0.01"
+                        name="cena"
+                        id="cena"
+                      /><br />
+
+                      <label for="substancja_czynna">Substancja czynna</label>
+                      <input
+                        type="text"
+                        name="substancja_czynna"
+                        id="substancja_czynna"
+                      /><br />
+                      
+                      <button type="submit" >Zamow</button>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+      </form>
+    </div>
+  </body>
+
+</html>

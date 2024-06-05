@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/globals.css" />
+    <link rel="stylesheet" href="static/stan.css" />
+    <title>Stan bazy leków</title>
+</head>
+
+<body>
+    <input type="button" value="back" onclick="history.back()"/> 
+    <div class="meds-container">
+    <div class="rectangle">
+    <h1>Stan bazy leków aptecznej</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nazwa Leku</th>
+                    <th>Ilość tabletek</th>
+                    <th>Dawka</th>
+                    <th>Ilość opakowań</th>
+                    <th>Data ważności</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for med in meds %}
+                <tr>
+                    <td>{{ med[1] }}</td>
+                    <td>{{ med[2] }}</td>
+                    <td>{{ med[3] }}mg</td>
+                    <td>{{ med[4] }}</td>
+                    <td>{{ med[5] }}</td>
+                    <td>{{ med[6] }}zł</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    </div>
+</body>
+
+</html>

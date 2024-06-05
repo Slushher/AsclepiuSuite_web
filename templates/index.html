@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>logowanie</title>
+  <link rel="stylesheet" href="static/globals.css" />
+  <link rel="stylesheet" href="static/logowanie.css" />
+</head>
+
+<body>
+  <div class="logowanie">
+    <form action="{{ url_for('process_login') }}" method="post">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <div class="rectangle">
+            <div class="group">
+              <div class="text-wrapper-2">
+                <h1>Logowanie</h1>
+              </div>
+              <div class="overlap-group-wrapper">
+                <div class="overlap-2">
+                  <div class="text-wrapper-3">ID aptekarza:</div>
+                  <input type="text" id="login_text" name="login_text" required>
+                </div>
+              </div>
+              <div class="div-wrapper">
+                <div class="overlap-3">
+                  <div class="text-wrapper-3">Hasło:</div>
+                  <input type="password" id="password_text" name="password_text" required>
+                </div>
+              </div>
+              <div class="overlap-group">
+                <div class="przycisk-logowania">
+                  <br />
+                  <input type="submit" value="Zaloguj się" />
+                </div>
+              </div>
+            </div>
+            <p class="zapomnia-e-has-a">
+              <span class="text-wrapper">Zapomniałeś hasła? </span>
+              <span class="span">
+                <a href="przypomnij"> Przypomnij</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

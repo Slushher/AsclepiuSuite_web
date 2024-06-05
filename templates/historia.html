@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/globals.css" />
+    <link rel="stylesheet" href="static/stan.css" />
+    <link rel="stylesheet" href="static/magazyn.css" />
+    <title>Historia Zamówień i Recept</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Powrót" onclick="history.back()"/> 
+
+
+    <div class="orders-container">
+        <div class="rectangle">
+            <h1>Historia Zamówień</h1>
+            <table id="orders_table">
+                <thead>
+                    <tr>
+                        <th>Data zamówienia</th>
+                        <th>Nazwa Leku</th>
+                        <th>Ilość opakowań</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr>
+                        <td>{{ order.date }}</td>
+                        <td>{{ order.med_name }}</td>
+                        <td>{{ order.quantity }}</td>
+                        <td>{{ order.status }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="prescriptions-container">
+        <div class="rectangle">
+            <h1>Historia Recept</h1>
+            <table id="prescriptions_table">
+                <thead>
+                    <tr>
+                        <th>Data wystawienia</th>
+                        <th>Nazwa Leku</th>
+                        <th>Ilość opakowań</th>
+                        <th>Dawka</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for prescription in prescriptions %}
+                    <tr>
+                        <td>{{ prescription.date }}</td>
+                        <td>{{ prescription.med_name }}</td>
+                        <td>{{ prescription.quantity }}</td>
+                        <td>{{ prescription.dosage }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

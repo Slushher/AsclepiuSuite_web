@@ -1,0 +1,77 @@
+html, body, #page{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height:100%;
+    position:fixed;
+}
+
+h1{
+    font-size: 2em;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.meds_container, th, td{
+    display: table-cell;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+    border-style:solid;
+    border-radius: 1px;
+    border-color:#000000;
+    margin:0;
+}
+
+tbody, td{
+    padding:0;
+    text-align:center;
+}
+
+.meds-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100%;
+}
+
+.meds-container .rectangle {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid;
+    border-color: #000000;
+    border-radius: 10px;
+    mix-blend-mode: hard-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width:100vh;
+    height: 75vh;
+}
+
+.meds_add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin: 0;
+}
+
+.meds_add button{
+    width: 100%;
+    border-radius: 0;
+}
+
+.rectangle{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+

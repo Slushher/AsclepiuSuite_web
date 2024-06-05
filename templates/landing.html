@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/globals.css" />
+    <link rel="stylesheet" href="static/landing.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>AsclepiuSuite</title>
+</head>
+
+<body>
+    <input type="button" value="back" onclick="history.back()"/> 
+    <div class="landing">
+        <h1>AsclepiuSuite</h1>
+        <div class="container">
+            <a href="{{ url_for('stan') }}"><button class="button">Stan Leków <i class="fa fa-list"
+                        aria-hidden="true"></i></button></a>
+            <a href="{{ url_for('recepta') }}"><button class="button">E-Recepty <i class="fa fa-clipboard"
+                        aria-hidden="true"></i></button></a>
+            <a href="{{ url_for('sprzedaz') }}"><button class="button">Sprzedaż <i class="fa fa-barcode" aria-hidden="true"></i></button></a>
+
+            <a href="{{ url_for('magazyn') }}"><button class="button">Magazyn<i class="fa-solid fa-warehouse" aria-hidden="true"></i></button></a>
+            <a><button class="button">Interakcje <i class="fa fa-heartbeat" aria-hidden="true"></i></button></a>
+            <a href="{{ url_for('zamowienia') }}"><button class="button">Zamówienia <i class="fa fa-truck" aria-hidden="true"></i></button></a>
+
+            <a><button class="button">Księgowość <i class="fa fa-area-chart" aria-hidden="true"></i></button></a>
+            <a><button class="button">Zakupy <i class="fa fa-shopping-cart" aria-hidden="true"></i></button></a>
+            <a><button class="button">Płatności <i class="fa fa-credit-card-alt" aria-hidden="true"></i></button></a>
+        </div>
+    </div>
+</body>
+
+</html>

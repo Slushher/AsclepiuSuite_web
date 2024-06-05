@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/globals.css" />
+  <link rel="stylesheet" href="static/sprzedaz.css" />
+  <title>Stan bazy leków</title>
+</head>
+<body>
+    <input type="button" value="back" onclick="history.back()"/> 
+    <div class="meds-container">
+      <form action="" method="post" name="medsAddForm" onsubmit="return sellMeds()">
+        <div class="rectangle">
+          <div class="group">
+            <div class="text-wrapper-2">
+              <h1>Sprzedaż</h1>
+            </div>
+                <div class="group">
+                  <label for="nazwa_leku">Nazwa leku</label>
+                  <input type="text" name="nazwa_leku" id="nazwa_leku" /><br />
+  
+                  <label for="ilosc_opakowan">Ilość opakowań</label>
+                  <input type="number" name="ilosc_opakowan" id="ilosc_opakowan" /><br />
+  
+                  <label for="dawka">Dawka</label>
+                  <input type="text" name="dawka" id="dawka" /><br />
+  
+                  <button type="submit">Sprzedaj</button>
+                </div>
+      </form>
+    </div>
